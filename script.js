@@ -102,15 +102,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 sections.forEach(section => observer.observe(section));
 
-// Form handler
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Your message has been sent successfully!');
-        contactForm.reset();
-    });
-}
+
 
 // TypeWriter Script
 class TypeWriter {
