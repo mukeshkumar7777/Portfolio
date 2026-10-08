@@ -4,62 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mukesh Kumar Sanivada - Portfolio</title>
-    <!-- Premium Fonts: Syne & Plus Jakarta Sans loaded directly -->
+    <title>Mukesh Kumar Sanivada | Fullstack & Flutter Developer</title>
+    
+    <!-- SEO & Metadata -->
+    <meta name="description" content="Mukesh Kumar Sanivada - Fullstack & Flutter Developer specializing in clean, responsive web and mobile solutions, RESTful APIs, and cross-platform mobile apps.">
+    <meta name="keywords" content="Mukesh Kumar Sanivada, Portfolio, Fullstack Developer, Flutter Developer, Mobile Developer, Dart, React, Node.js">
+    <meta name="author" content="Mukesh Kumar Sanivada">
+    <meta name="theme-color" content="#FDCC2D">
+
+    <!-- Open Graph (Social Sharing) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mukesh Kumar Sanivada | Fullstack & Flutter Developer">
+    <meta property="og:description" content="Passionate Fullstack & Flutter Developer focused on building high-performance web and mobile experiences.">
+    <meta property="og:image" content="portfolio.jpeg">
+    <meta property="og:url" content="https://mukeshkumar7777.github.io/">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@mukeshsanivada">
+    <meta name="twitter:creator" content="@mukeshsanivada">
+    <meta name="twitter:title" content="Mukesh Kumar Sanivada | Fullstack & Flutter Developer">
+    <meta name="twitter:description" content="Passionate Fullstack & Flutter Developer focused on building high-performance web and mobile experiences.">
+    <meta name="twitter:image" content="portfolio.jpeg">
+
+    <!-- Favicon (Neo-brutalist SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FDCC2D' stroke='%23000000' stroke-width='8'/><text x='50%' y='68%' font-family='sans-serif' font-weight='900' font-size='56' fill='%23000000' text-anchor='middle'>M</text></svg>">
+
+    <!-- Premium Google Fonts: Syne & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Top Scroll Progress Bar -->
     <div class="scroll-progress" id="scroll-progress"></div>
 
+    <!-- Navigation Header -->
     <header id="header">
-        <h3 onclick="scrollToSection('home')">mukesh</h3>
-        <button class="hamburger-toggle" id="hamburger-toggle" aria-label="Toggle menu">
+        <h3 onclick="scrollToSection('home')" aria-label="Mukesh Portfolio Home">mukesh<span class="logo-dot">.</span></h3>
+        
+        <button class="hamburger-toggle" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
+
         <nav class="nav-buttons" id="nav-menu">
-            <button onclick="scrollToSection('about')" class="nav-link">About</button>
-            <button onclick="scrollToSection('skills')" class="nav-link">Skills</button>
-            <button onclick="scrollToSection('projects')" class="nav-link">Projects</button>
-            <button onclick="scrollToSection('contact')" class="nav-link">Contact</button>
+            <a href="#about" onclick="scrollToSection('about'); return false;" class="nav-link">About</a>
+            <a href="#skills" onclick="scrollToSection('skills'); return false;" class="nav-link">Skills</a>
+            <a href="#projects" onclick="scrollToSection('projects'); return false;" class="nav-link">Projects</a>
+            <a href="#contact" onclick="scrollToSection('contact'); return false;" class="nav-link">Contact</a>
         </nav>
     </header>
 
     <!-- Home (Hero) Section -->
     <section id="home" class="home">
-
-
         <div class="hero-inner">
             <div class="hero-text">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Available for Opportunities</span>
+                </div>
+
                 <h1 class="hero-title">MUKESH<br>SANIVADA</h1>
+                
                 <div class="hero-definition">
                     <p class="definition-meaning">
-                        <span class="typewriter-text" data-text='["Fullstack Developer","Flutter Developer"]'></span>
+                        <span class="typewriter-text" data-text='["Fullstack Developer","Flutter Developer","Mobile App Architect","Problem Solver"]'></span>
                     </p>
                 </div>
+
                 <div class="hero-actions">
-                    <a href="https://www.linkedin.com/in/mukesh-kumar-sanivada-56999b298/" target="_blank"
-                        class="btn-nav-solid hero-btn">Hire Me</a>
-                    <a href="my_resume.pdf" target="_blank" class="btn-nav-solid hero-btn">Resume</a>
+                    <a href="https://www.linkedin.com/in/mukesh-kumar-sanivada-56999b298/" target="_blank" rel="noopener noreferrer"
+                        class="btn-nav-solid hero-btn" aria-label="Hire Mukesh on LinkedIn">
+                        Hire Me
+                    </a>
+                    <a href="my_resume.pdf" target="_blank" class="btn-nav-solid hero-btn" aria-label="Download Resume">
+                        Resume
+                    </a>
                 </div>
             </div>
+
             <div class="hero-right">
                 <div class="hero-image-wrapper">
-                    <img src="portfolio.jpeg" alt="Mukesh Kumar Sanivada" class="hero-profile-img">
+                    <img src="portfolio.jpeg" alt="Mukesh Kumar Sanivada - Software Developer" class="hero-profile-img">
                 </div>
                 <div class="pill-cta-container">
-                    <a href="#projects" class="pill-cta-btn" onclick="scrollToSection('projects')">
+                    <a href="#projects" class="pill-cta-btn" onclick="scrollToSection('projects'); return false;">
                         <div class="pill-cta-text">
                             <span class="cta-title">Explore my work</span>
-                            <span class="cta-subtitle">In 4 featured projects</span>
+                            <span class="cta-subtitle">In 5 featured projects</span>
                         </div>
                         <div class="pill-cta-icon">
                             <i class="fas fa-eye"></i>
@@ -81,34 +120,36 @@
             <div class="about-intro">
                 <div class="about-profile-header">
                     <img src="portfolio.jpeg" alt="Mukesh Kumar Sanivada" class="about-avatar">
-                    <h3>Who I Am 👋</h3>
+                    <div>
+                        <h3>Who I Am 👋</h3>
+                        <span class="about-role-sub">Fullstack & Flutter Engineer</span>
+                    </div>
                 </div>
                 <p>
                     I am a passionate developer focused on creating clean, responsive, and user-friendly digital
                     experiences. I enjoy building practical web and mobile solutions with simple design and smooth
                     functionality. I always aim to write efficient code and improve the overall user experience. I am
                     continuously learning, exploring new technologies, and growing through real-world projects.
-                    I enjoy solving challenging problems through logical thinking and creative development approaches. I
-                    believe in writing maintainable, scalable, and well-structured code that follows best practices. I
-                    am eager to collaborate with teams, contribute to meaningful projects, and continuously enhance my
-                    technical and professional skills. My goal is to build impactful software solutions that create real
-                    value for users and businesses.
                 </p>
-                <div class="about-stats">
+                <p>
+                    I enjoy solving challenging problems through logical thinking and creative development approaches. I
+                    believe in writing maintainable, scalable, and well-structured code that follows industry best practices.
+                </p>
+                <div class="about-stats" id="about-stats">
                     <div class="stat-item">
-                        <span class="stat-number">10+</span>
+                        <span class="stat-number" data-target="10">0+</span>
                         <span class="stat-label">Projects Built</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">5+</span>
+                        <span class="stat-number" data-target="5">0+</span>
                         <span class="stat-label">Core Techs</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">200+</span>
+                        <span class="stat-number" data-target="250">0+</span>
                         <span class="stat-label">Problems Solved</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">2+</span>
+                        <span class="stat-number" data-target="2">0+</span>
                         <span class="stat-label">Years Coding</span>
                     </div>
                 </div>
@@ -126,11 +167,7 @@
                         <div class="timeline-content">
                             <h4>Flutter Intern & Web Developer</h4>
                             <h5>Technical Hub | Skill Enhancement</h5>
-                            <p>Completed a Flutter internship, collaborating in a six-member team to build
-                                <strong>ShiberShield</strong> (scam message and email protection). Currently improving
-                                problem-solving skills and developing web applications like <strong>Midnight
-                                    Wish</strong>.
-                            </p>
+                            <p>Collaborating in a six-member team to build <strong>ShiberShield</strong> (scam message and phishing email protection). Continuously enhancing problem-solving skills and developing fullstack web applications like <strong>Midnight Wish</strong>.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -139,9 +176,7 @@
                         <div class="timeline-content">
                             <h4>Flutter Developer</h4>
                             <h5>Technical Hub, Aditya College of Engineering</h5>
-                            <p>Developed, scaled, and optimized multiple production-grade mobile applications.
-                                Maintained modular architectures using Provider, Riverpod, and Bloc state management
-                                systems.</p>
+                            <p>Developed, scaled, and optimized production-grade mobile applications. Maintained modular architectures using Provider, Riverpod, and Bloc state management systems.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -150,9 +185,7 @@
                         <div class="timeline-content">
                             <h4>Web Developer & Backend Intern</h4>
                             <h5>Technical Hub Internships</h5>
-                            <p>Constructed and deployed RESTful APIs using Node.js, Express.js, and MongoDB databases.
-                                Engineered dynamic interfaces with standard HTML, CSS, JavaScript, and Bootstrap
-                                integrations.</p>
+                            <p>Constructed and deployed RESTful APIs using Node.js, Express.js, and MongoDB. Engineered dynamic user interfaces with HTML5, CSS3, JavaScript, and Bootstrap integrations.</p>
                         </div>
                     </div>
                 </div>
@@ -182,7 +215,7 @@
                 </div>
                 <div class="skill-category">
                     <i class="fas fa-layer-group skill-category-icon"></i>
-                    <h3>Frameworks</h3>
+                    <h3>Frameworks & Runtime</h3>
                     <div class="skill-items">
                         <span class="skill-badge"><i class="fas fa-mobile-alt"></i> Flutter</span>
                         <span class="skill-badge"><i class="fab fa-react"></i> React</span>
@@ -193,7 +226,7 @@
                 </div>
                 <div class="skill-category">
                     <i class="fas fa-tools skill-category-icon"></i>
-                    <h3>Tools & DBs</h3>
+                    <h3>Tools & Databases</h3>
                     <div class="skill-items">
                         <span class="skill-badge"><i class="fab fa-git-alt"></i> Git</span>
                         <span class="skill-badge"><i class="fab fa-github"></i> GitHub</span>
@@ -214,19 +247,33 @@
         </div>
 
         <div class="projects-wrapper">
-            <div class="projects-container">
-                <!-- project 1 -->
+            <!-- Project Category Filter Pills -->
+            <div class="projects-filter-wrapper">
+                <div class="projects-filter" role="tablist" aria-label="Project category filter">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+                        <i class="fas fa-shapes"></i> All <span class="filter-count">5</span>
+                    </button>
+                    <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false">
+                        <i class="fas fa-mobile-alt"></i> Flutter Mobile <span class="filter-count">3</span>
+                    </button>
+                    <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">
+                        <i class="fas fa-globe"></i> Web & Fullstack <span class="filter-count">2</span>
+                    </button>
+                </div>
+            </div>
 
-                <div class="project-card">
+            <div class="projects-container">
+                <!-- Project 1: Tic-Tac-Toe -->
+                <div class="project-card" data-category="web">
                     <div class="project-header">
-                        <i class="fas fa-clock project-icon"></i>
-                        <span class="project-tag">Web Application</span>
+                        <div class="project-icon-box">
+                            <i class="fas fa-gamepad project-icon"></i>
+                        </div>
+                        <span class="project-tag tag-web"><i class="fas fa-globe"></i> Web App</span>
                     </div>
                     <div class="project-body">
-                        <h3>Tic-Tac-Toe</h3>
-                        <p>Developed a responsive Tic-Tac-Toe game using HTML, CSS, and JavaScript with an interactive
-                            user interface.Implemented game logic, turn management, win/draw detection, and board reset functionality
-                            using JavaScript.</p>
+                        <h3>Tic-Tac-Toe Game</h3>
+                        <p>Developed an interactive Tic-Tac-Toe game using HTML, CSS, and JavaScript. Features dynamic game logic, state management for turns, win/draw condition detection, score tracking, and smooth board resets.</p>
                         <div class="project-tech">
                             <span>HTML5</span>
                             <span>CSS3</span>
@@ -234,22 +281,23 @@
                         </div>
                     </div>
                     <div class="project-footer">
-                        <a href="https://github.com/mukeshkumar7777/tic-tac-toe" target="_blank" class="project-link"><i
-                                class="fab fa-github"></i> View Project</a>
+                        <a href="https://github.com/mukeshkumar7777/tic-tac-toe" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Tic Tac Toe repository on GitHub">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project-card">
+                <!-- Project 2: Midnight Wish -->
+                <div class="project-card" data-category="web">
                     <div class="project-header">
-                        <i class="fas fa-clock project-icon"></i>
-                        <span class="project-tag">Web Application</span>
+                        <div class="project-icon-box">
+                            <i class="fas fa-birthday-cake project-icon"></i>
+                        </div>
+                        <span class="project-tag tag-web"><i class="fas fa-globe"></i> Web App</span>
                     </div>
                     <div class="project-body">
                         <h3>Midnight Wish</h3>
-                        <p>Designed and built a web application that automates sending birthday wishes. Allows users to
-                            compose personalized messages and schedule them to be delivered precisely at midnight or any
-                            preferred time.</p>
+                        <p>A fullstack greeting scheduler that automates personalized birthday wishes. Allows users to craft custom messages and schedule automated delivery precisely at midnight or any preferred time window.</p>
                         <div class="project-tech">
                             <span>HTML5</span>
                             <span>CSS3</span>
@@ -258,22 +306,23 @@
                         </div>
                     </div>
                     <div class="project-footer">
-                        <a href="https://github.com/mukeshkumar7777/Midnight-Wish" target="_blank" class="project-link"><i
-                                class="fab fa-github"></i> View Project</a>
+                        <a href="https://github.com/mukeshkumar7777/Midnight-Wish" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Midnight Wish repository on GitHub">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card">
+                <!-- Project 3: MedEase -->
+                <div class="project-card" data-category="mobile">
                     <div class="project-header">
-                        <i class="fas fa-hand-holding-medical project-icon"></i>
-                        <span class="project-tag">Flutter Mobile</span>
+                        <div class="project-icon-box">
+                            <i class="fas fa-heart-pulse project-icon"></i>
+                        </div>
+                        <span class="project-tag tag-mobile"><i class="fas fa-mobile-alt"></i> Flutter</span>
                     </div>
                     <div class="project-body">
-                        <h3>MedEase (Medical App)</h3>
-                        <p>Designed and built a mobile medical platform. Supports secure Firebase user authentication,
-                            inventory schedules, store dashboards, and handles health questions using a custom NLP API.
-                        </p>
+                        <h3>MedEase (Medical Platform)</h3>
+                        <p>Engineered a cross-platform mobile healthcare application featuring secure Firebase authentication, live medicine inventory tracking, pharmacy dashboards, and an NLP API integration for medical queries.</p>
                         <div class="project-tech">
                             <span>Flutter</span>
                             <span>Dart</span>
@@ -282,22 +331,23 @@
                         </div>
                     </div>
                     <div class="project-footer">
-                        <a href="https://github.com/venkateshmalakala/medease-main" target="_blank"
-                            class="project-link"><i class="fab fa-github"></i> View Project</a>
+                        <a href="https://github.com/venkateshmalakala/medease-main" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View MedEase repository on GitHub">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="project-card">
+                <!-- Project 4: HomeUs -->
+                <div class="project-card" data-category="mobile">
                     <div class="project-header">
-                        <i class="fas fa-home project-icon"></i>
-                        <span class="project-tag">Flutter Mobile</span>
+                        <div class="project-icon-box">
+                            <i class="fas fa-city project-icon"></i>
+                        </div>
+                        <span class="project-tag tag-mobile"><i class="fas fa-mobile-alt"></i> Flutter</span>
                     </div>
                     <div class="project-body">
                         <h3>HomeUs (Rental App)</h3>
-                        <p>Built a modern rental finder application. Integrates a Google Maps location tracker, search
-                            parameters with 5+ filter fields, and synchronizes listings and favorites dynamically in
-                            Firebase Firestore.</p>
+                        <p>A modern real-estate rental app integrating Google Maps location services, dynamic multi-parameter property filters (5+ criteria), and real-time listing/favorites synchronization with Cloud Firestore.</p>
                         <div class="project-tech">
                             <span>Flutter</span>
                             <span>Dart</span>
@@ -306,21 +356,23 @@
                         </div>
                     </div>
                     <div class="project-footer">
-                        <a href="https://github.com/mukeshkumar7777/HomeUs" target="_blank" class="project-link"><i
-                                class="fab fa-github"></i> View Project</a>
+                        <a href="https://github.com/mukeshkumar7777/HomeUs" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View HomeUs repository on GitHub">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 5 -->
-                <div class="project-card">
+                <!-- Project 5: ShiberShield -->
+                <div class="project-card" data-category="mobile">
                     <div class="project-header">
-                        <i class="fas fa-shield-alt project-icon"></i>
-                        <span class="project-tag">Flutter Mobile</span>
+                        <div class="project-icon-box">
+                            <i class="fas fa-shield-halved project-icon"></i>
+                        </div>
+                        <span class="project-tag tag-mobile"><i class="fas fa-mobile-alt"></i> Flutter</span>
                     </div>
                     <div class="project-body">
-                        <h3>ShiberShield</h3>
-                        <p>Collaborated with a six-member team to design and develop ShiberShield, a secure mobile
-                            application that protects users from scam messages and phishing emails.</p>
+                        <h3>ShiberShield (Security App)</h3>
+                        <p>Collaborative mobile cybersecurity solution developed within a 6-member team. Protects users against phishing threats, scam SMS/emails, and suspicious malicious hyperlinks in real-time.</p>
                         <div class="project-tech">
                             <span>Flutter</span>
                             <span>Dart</span>
@@ -329,15 +381,16 @@
                         </div>
                     </div>
                     <div class="project-footer">
-                        <a href="https://github.com/Ramya755/CyberShield" target="_blank" class="project-link"><i
-                                class="fab fa-github"></i> View Project</a>
+                        <a href="https://github.com/Ramya755/CyberShield" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View ShiberShield repository on GitHub">
+                            <i class="fab fa-github"></i> View Project
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="contact-wrapper">
             <div class="section-title-wrapper">
@@ -351,40 +404,54 @@
                 </div>
                 <h3 class="contact-card-title">Let's build something great together!</h3>
                 <p class="contact-card-desc">
-                    Have a project in mind, exciting opportunities, or just want to chat? Drop me an email and I'll get back to you promptly.
+                    Have a project in mind, exciting job opportunities, or want to collaborate on Flutter and Fullstack tech? Drop me an email and I will get back to you promptly.
                 </p>
 
-                <a href="mailto:mukeshsanivada.7@gmail.com?subject=Let's%20Connect%20-%20Mukesh%20Sanivada" class="email-direct-btn">
-                    <div class="email-btn-left">
-                        <i class="fas fa-envelope email-btn-icon"></i>
-                        <div class="email-btn-text">
-                            <span class="email-btn-label">Send Email</span>
-                            <span class="email-btn-address">mukeshsanivada.7@gmail.com</span>
+                <div class="contact-actions-group">
+                    <a href="mailto:mukeshsanivada.7@gmail.com?subject=Let's%20Connect%20-%20Mukesh%20Sanivada" class="email-direct-btn" aria-label="Send email directly">
+                        <div class="email-btn-left">
+                            <i class="fas fa-envelope email-btn-icon"></i>
+                            <div class="email-btn-text">
+                                <span class="email-btn-label">Send Email</span>
+                                <span class="email-btn-address">mukeshsanivada.7@gmail.com</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="email-btn-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
+                        <div class="email-btn-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <button class="copy-email-btn" id="copy-email-btn" aria-label="Copy email address to clipboard" onclick="copyEmailToClipboard()">
+                        <i class="fas fa-copy"></i>
+                        <span>Copy Email</span>
+                    </button>
+                </div>
             </div>
 
             <div class="social-links">
-                <a href="mailto:mukeshsanivada.7@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/mukesh-kumar-sanivada-56999b298/" target="_blank"
-                    aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/mukeshkumar7777" target="_blank" aria-label="GitHub"><i
-                        class="fab fa-github"></i></a>
+                <a href="mailto:mukeshsanivada.7@gmail.com" aria-label="Send direct email" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/mukesh-kumar-sanivada-56999b298/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/mukeshkumar7777" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/mukeshsanivada" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) Profile" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/im_mukeshsanivada?stkn=OGhvNWJraHVvNjM3" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" title="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
+            
             <p class="footer-text">&copy; 2026 Mukesh Kumar Sanivada. All rights reserved.</p>
         </div>
     </section>
 
-    <!-- Scroll elements -->
-    <button id="back-to-top" onclick="scrollToSection('home')" aria-label="Back to top">
+    <!-- Floating Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToSection('home')" aria-label="Back to top" title="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Link to external client scripts -->
+    <!-- Toast Notification Banner -->
+    <div id="toast" class="toast" role="alert" aria-live="assertive">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span id="toast-msg">Copied to clipboard!</span>
+    </div>
+
+    <!-- External Client Scripts -->
     <script src="script.js"></script>
 </body>
 
